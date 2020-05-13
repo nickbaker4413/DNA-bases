@@ -1,0 +1,26 @@
+numTestCases = int(raw_input())          # Reading input from STDIN
+
+i = 1
+while i <= numTestCases:
+    length = int(raw_input())
+    code = str(raw_input())
+    
+    if "U" in code:
+        print("Error RNA nucleobases found!")
+        i+=1
+        continue
+    x = 0
+    s = ""
+    while x < length:
+        if (code[x] == "A"):
+           s+= 'T'
+        if (code[x] == "T"):
+           s+='A'
+        if (code[x] == "G"):
+            s+='C'
+        if (code[x] == "C"):
+            s+= 'G'
+        
+        x += 1
+    print(s)
+    i+= 1
